@@ -27,7 +27,7 @@
     <PublisherName>Anh Vu</PublisherName>
     <MinimumRequiredVersion>1.0.0.0</MinimumRequiredVersion>
     <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
-    <ApplicationRevision>24</ApplicationRevision>
+    <ApplicationRevision>26</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -65,6 +65,9 @@
   <PropertyGroup>
     <SignManifests>false</SignManifests>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>fabric-scissor.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Quartz, Version=3.0.7.0, Culture=neutral, PublicKeyToken=f6b8c98a402cc8a4, processorArchitecture=MSIL">
       <HintPath>packages\Quartz.3.0.7\lib\net452\Quartz.dll</HintPath>
@@ -96,11 +99,23 @@
     <Compile Include="Controller\SQLclass\SqlSoft.cs" />
     <Compile Include="Controller\ToolSupport.cs" />
     <Compile Include="Model\DetailInformation.cs" />
+    <Compile Include="View\EditDataForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\EditDataForm.Designer.cs">
+      <DependentUpon>EditDataForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\LoadingDialog.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\LoadingDialog.Designer.cs">
       <DependentUpon>LoadingDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
     <Compile Include="View\MainWindow.cs">
       <SubType>Form</SubType>
@@ -128,8 +143,14 @@
     <Compile Include="View\ShowCuttingData.Designer.cs">
       <DependentUpon>ShowCuttingData.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\EditDataForm.resx">
+      <DependentUpon>EditDataForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\LoadingDialog.resx">
       <DependentUpon>LoadingDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
@@ -206,9 +227,12 @@
     <None Include="Resources\control.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="fabric-scissor.ico" />
     <Content Include="Resources\ExportCuttingForm.xlsx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\small-techlink-logo.png" />
+    <None Include="Resources\user-286.png" />
     <None Include="Resources\pencil.png" />
     <None Include="Resources\growth.png" />
     <None Include="Resources\logoTechlinkFix.png" />

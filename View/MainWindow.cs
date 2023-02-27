@@ -323,7 +323,6 @@ namespace cloth_cutting_data_report
                 {
                     lbCutQty.Text = "0";
                 }
-
             }
             else
             {
@@ -527,7 +526,8 @@ namespace cloth_cutting_data_report
 
         private void btnChangeData_Click(object sender, EventArgs e)
         {
-
+            LoginForm loginForm = new LoginForm();
+            loginForm.ShowDialog();
         }
     }
 }

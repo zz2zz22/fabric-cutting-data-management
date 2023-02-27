@@ -17,7 +17,5 @@ namespace cloth_cutting_data_report
             ToolSupport toolSupport = new ToolSupport();
             toolSupport.ExportData(details, PathSave, PathCuttingReport);
         }
-
-        
     }
 }
